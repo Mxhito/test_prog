@@ -5,8 +5,8 @@ import '/screens/playlist_screen.dart';
 class Home extends StatelessWidget {
   Home({Key? key}) : super(key: key);
 
-  final editingController = TextEditingController(
-      text: 'https://open.spotify.com/playlist/3dpOdyAk3AVSSc0CqXQEA6');
+  final _editingController = TextEditingController(
+      text: 'https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF');
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class Home extends StatelessWidget {
                   ),
                   const SizedBox(height: 20.0),
                   TextField(
-                    controller: editingController,
+                    controller: _editingController,
                     decoration: const InputDecoration(
                       icon: Icon(Icons.compare_arrows),
                     ),
@@ -46,12 +46,12 @@ class Home extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    if (editingController.text != '') {
+                    if (_editingController.text != '') {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              PlaylistScreen(url: editingController.text),
+                              PlaylistScreen(url: _editingController.text),
                         ),
                       );
                     } else {

@@ -40,7 +40,7 @@ class MyParser {
 
       //* Tracklist's names
       final tracklistNames = document
-          .getElementsByClassName('EntityRowV2__Link-sc-ayafop-8 cGmPqp')
+          .getElementsByClassName('EntityRowV2__AnchorLink-sc-ayafop-8 hfgfpQ')
           .map((e) => e.innerHtml)
           .toList();
 
@@ -88,7 +88,6 @@ class MyParser {
           }
         }
         return duration;
-
       }).then((value) {
         final tracklistData = TracklistData(
           tracklistNames: tracklistNames,
